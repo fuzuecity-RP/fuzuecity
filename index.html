@@ -5,8 +5,8 @@
   <title>Fuzuê City RP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONTE PREMIUM -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <!-- FONTE FUTURISTA / RP -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
   <style>
     /* RESET */
@@ -14,61 +14,216 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    /* FUNDO DO SITE */
-    body {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top, rgba(30, 64, 255, 0.4), transparent 60%),
-        linear-gradient(180deg, #02040f 0%, #050b2e 50%, #02040f 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
       font-family: 'Orbitron', sans-serif;
     }
 
-    /* TEXTO GIGANTE NO FUNDO */
-    body::before {
-      content: "FUZUÊ CITY ⛲";
-      position: absolute;
-      inset: 0;
+    /* FUNDO GERAL */
+    body {
+      background:
+        linear-gradient(rgba(5,10,30,0.85), rgba(5,10,30,0.95)),
+        url("https://images.unsplash.com/photo-1549921296-3a6b5e4f6c79") center/cover no-repeat;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 35px;
+    }
+
+    .top-left {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 12px;
+    }
 
-      font-size: 20vw;
+    .logo {
+      height: 45px;
+    }
+
+    .logo-text {
       font-weight: 900;
-      letter-spacing: 18px;
-      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-      /* TEXTO PREMIUM */
-      background: linear-gradient(
-        120deg,
-        rgba(255,255,255,0.08),
-        rgba(0,120,255,0.18),
-        rgba(255,255,255,0.05)
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .menu a {
+      margin: 0 15px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-      /* BRILHO + PROFUNDIDADE */
-      text-shadow:
-        0 0 40px rgba(0, 120, 255, 0.35),
-        0 0 80px rgba(0, 90, 255, 0.15);
+    .menu a:hover {
+      color: #4da6ff;
+    }
 
-      transform: rotate(-8deg);
-      opacity: 0.9;
+    .btn-login {
+      background: #4da6ff;
+      color: #000;
+      padding: 10px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 700;
+    }
 
-      user-select: none;
-      pointer-events: none;
+    /* HERO */
+    .hero {
+      height: calc(100vh - 90px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(77,166,255,0.25), transparent 60%);
+    }
+
+    .hero-logo {
+      width: 220px;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      margin-top: 25px;
+      font-size: 46px;
+      letter-spacing: 10px;
+      color: #7db7ff;
+      z-index: 1;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      color: #ccc;
+      z-index: 1;
+    }
+
+    /* NAVEGAÇÃO */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .nav-buttons a {
+      background: rgba(255,255,255,0.05);
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .nav-buttons a:hover {
+      background: #4da6ff;
+      color: #000;
+    }
+
+    /* CONTEÚDO */
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 25px;
+      text-align: center;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #bbb;
+    }
+
+    /* CARD ATENÇÃO */
+    .alert-card {
+      margin-top: 35px;
+      padding: 25px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(77,166,255,0.4);
+    }
+
+    .alert-card h3 {
+      margin-bottom: 10px;
+      color: #4da6ff;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #777;
+      font-size: 13px;
     }
   </style>
 </head>
 
 <body>
-  <!-- Apenas o fundo cinematográfico -->
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="top-left">
+      <img src="logo.png" alt="Fuzuê City" class="logo">
+      <span class="logo-text">FUZUÊ CITY</span>
+    </div>
+
+    <nav class="menu">
+      <a href="#">Início</a>
+      <a href="#">Cidades</a>
+      <a href="#">Loja</a>
+      <a href="#">VIP</a>
+    </nav>
+
+    <a href="#" class="btn-login">Login / Discord</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <img src="logo.png" alt="Fuzuê City" class="hero-logo">
+    <h1>ROLEPLAY</h1>
+    <p>Viva sua história na cidade</p>
+  </section>
+
+  <!-- NAVEGAÇÃO -->
+  <section class="nav-buttons">
+    <a href="#">INÍCIO</a>
+    <a href="#">CIDADES</a>
+    <a href="#">LOJA VIP</a>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <main class="content">
+    <h2>Bem-vindo à Fuzuê City</h2>
+    <p>
+      Aqui o roleplay é levado a sério. Um servidor feito para quem busca
+      imersão, organização e experiências únicas dentro da cidade.
+    </p>
+
+    <div class="alert-card">
+      <h3>⚠ ATENÇÃO</h3>
+      <p>
+        Sempre verifique a cidade correta e seu ID antes de finalizar qualquer
+        compra na loja VIP.
+      </p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Fuzuê City RP — Todos os direitos reservados</p>
+    <span>Não afiliado a marcas do mundo real</span>
+  </footer>
+
 </body>
 </html>
