@@ -1,126 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Fuzuê City RP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    /* ================= RESET ================= */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    /* ================= FUNDO ================= */
-    body {
-      min-height: 100vh;
-      background: radial-gradient(circle at top, #0a1cff, #02040f);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* ===== TEXTO DE FUNDO (MARCA) ===== */
-    body::before {
-      content: "FUZUÊ CITY";
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18vw;
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.035);
-      letter-spacing: 12px;
-      text-transform: uppercase;
-      transform: rotate(-8deg);
-      user-select: none;
-      pointer-events: none;
-    }
-
-    /* ================= CARD ================= */
-    .container {
-      background: rgba(10, 20, 60, 0.78);
-      backdrop-filter: blur(14px);
-      border-radius: 22px;
-      padding: 42px 32px;
-      max-width: 420px;
-      width: 90%;
-      text-align: center;
-      box-shadow:
-        0 0 60px rgba(0, 100, 255, 0.45),
-        inset 0 0 0 1px rgba(255,255,255,0.05);
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ================= TÍTULO ================= */
-    .container h1 {
-      font-size: 28px;
-      margin-bottom: 14px;
-      text-shadow: 0 0 14px rgba(0, 140, 255, 0.9);
-      letter-spacing: 1px;
-    }
-
-    /* ================= TEXTO ================= */
-    .container p {
-      font-size: 15px;
-      opacity: 0.9;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-
-    /* ================= BOTÃO ================= */
-    .container a {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 14px 28px;
-      background: linear-gradient(135deg, #3b6cff, #00b3ff);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 14px;
-      font-weight: bold;
-      font-size: 16px;
-      box-shadow: 0 0 28px rgba(0, 140, 255, 0.75);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .container a:hover {
-      transform: scale(1.06);
-      box-shadow: 0 0 45px rgba(0, 170, 255, 1);
-    }
-
-    /* ================= RODAPÉ ================= */
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      opacity: 0.6;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <h1>🔥 FUZUÊ CITY RP 🔥</h1>
-
-    <p>Servidor RP ativo dentro e fora do jogo.</p>
-    <p>Staff online • Suporte 24h • Comunidade ativa</p>
-
-    <a href="https://discord.gg/seulink" target="_blank">
-      🚪 Entrar no Discord
-    </a>
-
-    <div class="footer">
-      © Fuzuê City RP • Todos os direitos reservados
-    </div>
-  </div>
-
-</body>
-</html>
+body::before {
+  content: "FUZUÊ CITY";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20vw;
+  font-weight: 900;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.03);
+  transform: rotate(-8deg);
+  user-select: none;
+  pointer-events: none;
+}
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(30, 64, 255, 0.35), transparent 60%),
+    linear-gradient(180deg, #02040f 0%, #050b2e 50%, #02040f 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
